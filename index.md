@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# P1ratRuleZZZ GitHub
 
-You can use the [editor on GitHub](https://github.com/p1ratrulezzz/p1ratrulezzz.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Welcome to P1ratRuleZZZ GitHub blog
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Here is my repo on [GitHub](https://github.com/p1ratrulezzz)
 
-### Markdown
+## Projects
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Highlighted projects that I'm proud of goes next. This is just a index page to access them.
 
-```markdown
-Syntax highlighted code block
+### Node.js VK.com chat bot
 
-# Header 1
-## Header 2
-### Header 3
+The chat bot for VKontakte network. It is not a community bot, this is just an emulation of human account so it is easy to add this bot in dialogs and resend their messages to other people. 
 
-- Bulleted
-- List
+In order to install this bot visit its [repo page](https://github.com/p1ratrulezzz/node-vkbot)
 
-1. Numbered
-2. List
+### Tatar-russian dictionary (js driven)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/p1ratrulezzz/p1ratrulezzz.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This was developed very long time ago on Nokia N70 so this is why the design is so small for new devices.
+[Visit tatar-russin dictionary's page](https://p1ratrulezzz.github.io/old-js-tatdict/) and [repo](https://github.com/p1ratrulezzz/old-js-tatdict)
