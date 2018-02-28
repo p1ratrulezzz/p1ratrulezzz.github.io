@@ -2,8 +2,6 @@
 
 ## Welcome to P1ratRuleZZZ GitHub blog
 
-Here is my repo on [GitHub](https://github.com/p1ratrulezzz)
-
 ## Projects
 
 Highlighted projects that I'm proud of goes next. This is just a index page to access them.
