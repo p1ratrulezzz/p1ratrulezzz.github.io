@@ -20,7 +20,7 @@ This was developed very long time ago on Nokia N70 so this is why the design is 
 [Visit tatar-russin dictionary's page](/old-js-tatdict/) and [repo](https://github.com/p1ratrulezzz/old-js-tatdict)
 
 ### Wordpress mp3jPlayer mod
-![mp3jplayer](/mp3jplayer.jpeg)
+![mp3jplayer](/img/mp3jplayer.jpeg)
 
 This module is the same as [here](https://ru.wordpress.org/plugins/mp3-jplayer/) but I've added one neat feature in order to be able to play whole remote directories as playlist using apache index view. This is a quite tricky to configure on server side but the use case of this module can be described by this example: 
 
@@ -75,6 +75,8 @@ the last param just will uppercase letters in result. 0x544ba will be 0x544BA
 
 
 ### Signa creator
+
+![Signa](/img/signa.jpeg)
 
 Just an example of how to write something on an image using only js
 
