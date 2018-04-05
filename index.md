@@ -64,7 +64,7 @@ let hexValue = ConvertSys(2564, 10, 16, true);
 // or
 let hexValue = ConvertSys(2564, 10, 16, false); 
 
-the last param just will uppercase letters in result. 0x544ba will be 0x544BA
+// the last param just will uppercase letters in result. 0x544ba will be 0x544BA
 
 
 ```
@@ -76,7 +76,7 @@ the last param just will uppercase letters in result. 0x544ba will be 0x544BA
 
 ![Signa](/img/signa.jpeg)
 
-Just an example of how to write something on an image using only js
+Just an example of how to write something on an image using only js and also download the image using only js.
 
 [Online demo](/signa-creator/public/)
 
