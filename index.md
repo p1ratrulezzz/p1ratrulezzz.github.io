@@ -87,7 +87,7 @@ Check [repo](https://github.com/p1ratrulezzz/signa-creator) for code an fork the
 
 Generates funny Cumberbatch-like names. For now only Russian language is supported. Latin names will be added soon.
 
-![Cumberbatch](/img/cumberbatch.jpeg)
+![Cumberbatch](/img/benedict-cumberbatch-name-wrong-funny.jpg)
 
 [Online demo](/cumberbatch)
 
