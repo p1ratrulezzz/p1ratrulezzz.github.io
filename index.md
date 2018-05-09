@@ -89,7 +89,5 @@ Generates funny Cumberbatch-like names. For now only Russian language is support
 
 ![Cumberbatch](/img/benedict-cumberbatch-name-wrong-funny.jpg)
 
-[Online demo](/cumberbatch)
-
-Check [repo](https://github.com/p1ratrulezzz/cumberbatch)
+Take a look at [The online demo](/cumberbatch) and check [repo](https://github.com/p1ratrulezzz/cumberbatch)
 
