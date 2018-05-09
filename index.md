@@ -91,3 +91,5 @@ Generates funny Cumberbatch-like names. For now only Russian language is support
 
 [Online demo](/cumberbatch)
 
+Check [repo](https://github.com/p1ratrulezzz/cumberbatch)
+
