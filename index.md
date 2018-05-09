@@ -81,3 +81,13 @@ Just an example of how to write something on an image using only js and also dow
 [Online demo](/signa-creator/public/)
 
 Check [repo](https://github.com/p1ratrulezzz/signa-creator) for code an fork the project using your own image and settings for creating signs
+
+
+### Benedict Cumberbatch name generator
+
+Generates funny Cumberbatch-like names. For now only Russian language is supported. Latin names will be added soon.
+
+![Cumberbatch](/img/cumberbatch.jpeg)
+
+[Online demo](/cumberbatch)
+
