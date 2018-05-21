@@ -5,7 +5,7 @@
   <title>Divizion super processor (doesn't support divizion by zero)</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	
-  <script type="text/javascript" src="js/names_helper.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>
 </head>
 
 <body>
@@ -24,46 +24,48 @@
 </div>
 
 <script type="text/javascript">
-  // base64 encoded ascii to ucs-2 string
-  // @link: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa#Unicode_Strings
-  function atou(str) {
-      return decodeURIComponent(escape(window.atob(str)));
-  }
+  (function($) {
+	  // base64 encoded ascii to ucs-2 string
+	  // @link: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa#Unicode_Strings
+	  function atou(str) {
+	      return decodeURIComponent(escape(window.atob(str)));
+	  }
 
 
-  /**
-   * Zero divizion error class
-   */
-  class ZeroDivizionError extends Error {}
+	  /**
+	   * Zero divizion error class
+	   */
+	  class ZeroDivizionError extends Error {}
 
 
-  $('#solve').click(function(e) {
-    try {
-      let op2 = parseFloat($('#operand2').val());
-      if (op2 == 0) {
-        throw new ZeroDivizionError();
-      }
+	  $('#solve').click(function(e) {
+	    try {
+	      let op2 = parseFloat($('#operand2').val());
+	      if (op2 == 0) {
+		throw new ZeroDivizionError();
+	      }
 
-      let result = parseFloat($('#operand1').val()) / op2;
-      if (isNaN(result)) {
-        throw new Error();
-      }
+	      let result = parseFloat($('#operand1').val()) / op2;
+	      if (isNaN(result)) {
+		throw new Error();
+	      }
 
-      alert('Это буит ' + (Math.round(result * 100)) / 100);
-    }
-    catch (e) {
-      if (e instanceof ZeroDivizionError) {
-        let win = window.open(atou('aHR0cHM6Ly9yYXdnaXQuY29tL3AxcmF0cnVsZXp6ei9wMXJhdHJ1bGV6enouZ2l0aHViLmlvL21hc3Rlci9pbWcvRmExanpIbjJPNzAuanBn'));
-      }
-      else {
-        alert('Введены неверные данные (и НИКОГДА НЕДЕЛИТЕ НА НОЛЬ!!!)');
-      }
+	      alert('Это буит ' + (Math.round(result * 100)) / 100);
+	    }
+	    catch (e) {
+	      if (e instanceof ZeroDivizionError) {
+		let win = window.open(atou('aHR0cHM6Ly9yYXdnaXQuY29tL3AxcmF0cnVsZXp6ei9wMXJhdHJ1bGV6enouZ2l0aHViLmlvL21hc3Rlci9pbWcvRmExanpIbjJPNzAuanBn'));
+	      }
+	      else {
+		alert('Введены неверные данные (и НИКОГДА НЕДЕЛИТЕ НА НОЛЬ!!!)');
+	      }
 
-    }
+	    }
 
-    e.preventDefault();
-    return false;
-  });
+	    e.preventDefault();
+	    return false;
+	  });
+  }) (jQuery);
 </script>
 </body>
 
