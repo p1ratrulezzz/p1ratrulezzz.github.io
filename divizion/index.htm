@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Divizion super processor (doesn't support divizion by zero)</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	
+  <script type="text/javascript" src="js/names_helper.js"></script>
+</head>
+
+<body>
+ <div class="well">
+  <form action="#" method="post">
+    <div class="form-group">
+      <label for="operand1">Делимое</label>
+      <input class="form-control" type="text" name="operand1" id="operand1" placeholder="Что делим">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Делитель</label>
+      <input class="form-control" type="text" name="operand2" id="operand2" placeholder="На что делим (ЛИШЬ БЫ НЕ НОЛЬ!!!)">
+    </div>
+    <input type="button" id="solve" class="btn btn-primary" value="Поделить">
+  </form>
+</div>
+
+<script type="text/javascript">
+  // base64 encoded ascii to ucs-2 string
+  // @link: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa#Unicode_Strings
+  function atou(str) {
+      return decodeURIComponent(escape(window.atob(str)));
+  }
+
+
+  /**
+   * Zero divizion error class
+   */
+  class ZeroDivizionError extends Error {}
+
+
+  $('#solve').click(function(e) {
+    try {
+      let op2 = parseFloat($('#operand2').val());
+      if (op2 == 0) {
+        throw new ZeroDivizionError();
+      }
+
+      let result = parseFloat($('#operand1').val()) / op2;
+      if (isNaN(result)) {
+        throw new Error();
+      }
+
+      alert('Это буит ' + (Math.round(result * 100)) / 100);
+    }
+    catch (e) {
+      if (e instanceof ZeroDivizionError) {
+        let win = window.open(atou('aHR0cHM6Ly9yYXdnaXQuY29tL3AxcmF0cnVsZXp6ei9wMXJhdHJ1bGV6enouZ2l0aHViLmlvL21hc3Rlci9pbWcvRmExanpIbjJPNzAuanBn'));
+      }
+      else {
+        alert('Введены неверные данные (и НИКОГДА НЕДЕЛИТЕ НА НОЛЬ!!!)');
+      }
+
+    }
+
+    e.preventDefault();
+    return false;
+  });
+</script>
+</body>
+
+</html>
