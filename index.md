@@ -78,7 +78,7 @@ let hexValue = ConvertSys(2564, 10, 16, false);
 
 Just an example of how to write something on an image using only js and also download the image using only js.
 
-[Online demo](/signa-creator/public/)
+[Online demo](/signa-creator/)
 
 Check [repo](https://github.com/p1ratrulezzz/signa-creator) for code an fork the project using your own image and settings for creating signs
 
