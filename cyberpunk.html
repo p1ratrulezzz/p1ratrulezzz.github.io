@@ -12,7 +12,7 @@
 		let timer = new Timer(cyberpunkReleaseDate);
 		let $timerWrapper = $('.timer-wrapper');
 		timer.updateResultCb = function(result) {
-				$timerWrapper.html('До выхода Cyberpunk 2077 осталось ' + result.years + ' лет ' + result.days +' дней ' + result.hours + ' часов ' + result.minutes + ' минут ' + result.seconds + ' секунд');
+				$timerWrapper.html('До выхода Cyberpunk 2077 осталось ' + result.days +' дней ' + result.hours + ' часов ' + result.minutes + ' минут ' + result.seconds + ' секунд');
 		}
 
 		timer.start();
