@@ -27,7 +27,7 @@ function Timer(dateTo) {
             let remaining = new Date(diffMs);
             self.updateResultCb({
                 years: remaining.getUTCFullYear() - 1970,
-                days: remaining.getUTCDate() - 1,
+                days: Math.floor(diffMs / (24 * 60 * 60 * 1000)),
                 hours: remaining.getUTCHours(),
                 minutes: remaining.getUTCMinutes(),
                 seconds: remaining.getUTCSeconds()
