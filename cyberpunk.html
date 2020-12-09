@@ -1,61 +1,21 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF8">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/js/timer.js"></script>
 </head>
 <body>
-<div class="timer-wrapper"></div>
+	<div class="timer-wrapper"></div>
 
-<script type="text/javascript">
+	<script type="text/javascript">
+		let cyberpunkReleaseDate = new Date(Date.UTC(2020, 11, 10, 0, 0, 0));
+		let timer = new Timer(cyberpunkReleaseDate);
+		let $timerWrapper = $('.timer-wrapper');
+		timer.updateResultCb = function(result) {
+				$timerWrapper.html('До выхода Cyberpunk 2077 осталось ' + result.years + ' лет ' + result.days +' дней ' + result.hours + ' часов ' + result.minutes + ' минут ' + result.seconds + ' секунд');
+		}
 
-let cyberpunkReleaseDate = new Date(Date.UTC(2020, 11, 10, 0, 0, 0));
-let timer = new Timer(cyberpunkReleaseDate);
-let $timerWrapper = $('.timer-wrapper');
-timer.updateResultCb = function(result) {
-		$timerWrapper.html('До выхода Cyberpunk 2077 осталось ' + result.years + ' лет ' + result.days +' дней ' + result.hours + ' часов ' + result.minutes + ' минут ' + result.seconds + ' секунд');
-}
-
-timer.start();
-
-/**************************************/
-function Timer(dateTo) {
-	let self = this; 
-	self.dateTo = dateTo;
-  self.timer = null;
-  self.updateIntervalMs = 1000;
-  
-  self.updateResultCb = function(result) {
-  	console.log(result);
-  };
-  
-  self.stop = function() {
-  	clearInterval(self.timer);
-  }
-  
-  self.start = function() {
-  	if (self.timer != null) {
-    	return;
-    }
-    
-    self.timer = setInterval(function() {
-    	let diffMs = self.dateTo - (new Date());
-      if (diffMs < 0) {
-      	self.stop();
-      }
-      
-      let remaining = new Date(diffMs);
-    	self.updateResultCb({
-      	years: remaining.getFullYear() - 1970,
-        days: remaining.getUTCDate() - 1,
-        hours: remaining.getUTCHours(),
-        minutes: remaining.getMinutes(),
-        seconds: remaining.getSeconds()
-      });
-    }, self.updateIntervalMs);
-  }
-}
-
-
-</script>
+		timer.start();
+	</script>
 </body>
 </html>
